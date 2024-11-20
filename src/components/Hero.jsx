@@ -7,7 +7,7 @@ export default function () {
       <img
         src={segun}
         alt=""
-        className="mx-auto mb-8 h-48 w-48 rounded-full onject-cover transform transition-transform duration-300 hover:scale-105"
+        className="hidden md:block mx-auto mb-8 h-48 w-48 rounded-full onject-cover transform transition-transform duration-300 hover:scale-105"
       />
       <h1 className="h1 text-4xl font-bold">
         I'm{" "}
