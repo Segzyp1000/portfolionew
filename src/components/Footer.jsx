@@ -15,9 +15,15 @@ function Footer() {
               </p>
             </div>
             <div className="flex-1 w-full">
-              <form className="flex items-center justify-center">
+              <form
+                action="https://formspree.io/f/mjvnkeqy"
+                method="POST"
+                enctype="multipart/form-data"
+                className="flex items-center justify-center"
+              >
                 <input
                   type="email"
+                  name="email"
                   placeholder="Enter Email"
                   className="w-full rounded-lg p-2 rounded-l-lg bg-gray-800 border border-gray-600 focus:outline-none focus:border-green-400"
                 />
