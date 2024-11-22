@@ -3,8 +3,8 @@ import Segzy from "../assets/Segzy.png";
 
 function About() {
   return (
-    <div className="py-10" id="aboutme">
-      <div className="container mx-auto px- md:px-16 lg:px-24 space-x-0 md:space-x-10 mt-10 py-12">
+    <div id="aboutme">
+      <div className="container mx-auto px- md:px-16 lg:px-24 space-x-0 md:space-x-10  py-10">
         <h2 className="text-4xl font-bold text-center mb-12">About me</h2>
         <div className="flex flex-col lg:flex-row items-center md:space-x-12 p">
           <img
@@ -74,7 +74,7 @@ function About() {
                     SCSS
                   </label>
                   <div className="grow bg-gray-800 rounded-full h-2.5 md:ml-4">
-                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-5/12"></div>
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-8/12"></div>
                   </div>
                 </div>
               </div>

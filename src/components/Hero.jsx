@@ -3,7 +3,7 @@ import segun from "../assets/segx.jpg";
 
 export default function () {
   return (
-    <div className="text-center pt-20 bg-black/5" id="#home ">
+    <div className="text-center py-20 mt-5 md:mt-0 bg-black/5" id="#home ">
       <img
         src={segun}
         alt=""

@@ -67,9 +67,9 @@ function Navbar() {
         <div
           className={`${
             openNavigation ? "flex" : "hidden"
-          } md:hidden flex-col py-12 justify-center items-center bg-gray-800 text-white p-4 absolute top-16 left-0 z-50 w-full space-y-12`}
+          } md:hidden flex-col py-12 justify-center items-center bg-gray-800 text-white p-4 absolute top-16 left-0 z-50 w-full space-y-9`}
         >
-          <ul className="mt-5 flex flex-col justify-center items-center">
+          <ul className="space-y-7 flex flex-col justify-center items-center">
             <li className="py-2">
               <a
                 href="#home"
