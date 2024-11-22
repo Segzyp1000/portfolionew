@@ -27,7 +27,7 @@ function Navbar() {
     <nav className="px-8 md:px-16 lg:px-24">
       <div className="w-full py-2 flex justify-between item-center">
         <div className="py-2">
-          <img src={logo} alt="" width={75} height={75} />
+          <img src={logo} alt="" width={85} height={85} className="p-2" />
         </div>
         <div className="hidden md:flex space-x-6 p-2">
           <a href="#home" className="h1 hover:text-gray-400">
@@ -49,7 +49,7 @@ function Navbar() {
         >
           Contact me
         </a>
-        <div className="md:hidden">
+        <div className="md:hidden p-3">
           {openNavigation ? (
             <AiOutlineClose
               size={25}
