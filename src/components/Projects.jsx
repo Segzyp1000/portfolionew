@@ -45,7 +45,7 @@ const projects = [
     image: movie,
     technology: "React, Firebase, Tailwindcss, ContextAPI",
     github: "https://github.com/Segzyp1000/movie",
-    website: "https://github.com/Segzyp1000/movied",
+    website: "https://movieboxlist.vercel.app/",
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="py-10" id="project">
+    <div className="py-10" id="projects">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <h2 className="text-4xl font-bold text-center mb-12">My Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

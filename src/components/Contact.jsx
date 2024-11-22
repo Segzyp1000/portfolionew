@@ -3,7 +3,7 @@ import { FaEnvelope, FaPhone, FaMapMarkedAlt } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <div className="py-10">
+    <div className="py-10" id="contact">
       <div className="container mx-auto px-5 md:px-16 lg:px-24 space-x-5 mt-10 py-12">
         <h2 className="text-4xl font-bold text-center mb-12">Contact me</h2>
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
@@ -67,9 +67,14 @@ export default function Contact() {
                   placeholder="Write me a message"
                 ></textarea>
               </div>
-              <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white hidden md:inline transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full my-2">
-                Send Message
-              </button>
+              <a href="mailto:segunolowoyeye@gmail.com">
+                <button
+                  type="submit"
+                  className="bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full my-2"
+                >
+                  Send Message
+                </button>
+              </a>
             </form>
           </div>
         </div>

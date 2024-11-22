@@ -2,9 +2,26 @@ import React, { useState } from "react";
 import logo from "../assets/SEGUN.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [openNavigation, setOpenNavigation] = useState(false);
+
+  const toggleNavigation = () => {
+    if (openNavigation) {
+      setOpenNavigation(false);
+      enablePageScroll();
+    } else {
+      setOpenNavigation(true);
+      disablePageScroll();
+    }
+  };
+
+  const handleClick = () => {
+    if (!openNavigation) return;
+    enablePageScroll();
+    setOpenNavigation(false);
+  };
 
   return (
     <nav className="px-8 md:px-16 lg:px-24">
@@ -19,9 +36,6 @@ function Navbar() {
           <a href="#aboutme" className="h1 hover:text-gray-400">
             About me
           </a>
-          <a href="#services" className="h1 hover:text-gray-400">
-            Services
-          </a>
           <a href="#projects" className="h1 hover:text-gray-400">
             Projects
           </a>
@@ -29,60 +43,76 @@ function Navbar() {
             Contact
           </a>
         </div>
-        <button className="hidden md:block bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full">
+        <a
+          href="#contact"
+          className="hidden md:block bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
+        >
           Contact me
-        </button>
-
+        </a>
         <div className="md:hidden">
-          {menuOpen ? (
+          {openNavigation ? (
             <AiOutlineClose
               size={25}
               className="text-white"
-              onClick={() => setMenuOpen(false)}
+              onClick={toggleNavigation}
             />
           ) : (
             <RxHamburgerMenu
               size={25}
               className="text-white"
-              onClick={() => setMenuOpen(true)}
+              onClick={toggleNavigation}
             />
           )}
         </div>
         <div
           className={`${
-            menuOpen ? "flex" : "hidden"
+            openNavigation ? "flex" : "hidden"
           } md:hidden flex-col py-12 justify-center items-center bg-gray-800 text-white p-4 absolute top-16 left-0 z-50 w-full space-y-12`}
         >
           <ul className="mt-5 flex flex-col justify-center items-center">
             <li className="py-2">
-              <a href="#home" className="hover:text-gray-400">
+              <a
+                href="#home"
+                onClick={handleClick}
+                className="hover:text-gray-400"
+              >
                 Home
               </a>
             </li>
             <li className="py-2">
-              <a href="#aboutme" className="hover:text-gray-400">
+              <a
+                href="#aboutme"
+                onClick={handleClick}
+                className="hover:text-gray-400"
+              >
                 About me
               </a>
             </li>
+
             <li className="py-2">
-              <a href="#services" className="hover:text-gray-400">
-                Services
-              </a>
-            </li>
-            <li className="py-2">
-              <a href="#projects" className="hover:text-gray-400">
+              <a
+                href="#projects"
+                onClick={handleClick}
+                className="hover:text-gray-400"
+              >
                 Projects
               </a>
             </li>
             <li className="py-2">
-              <a href="#contact" className="hover:text-gray-400">
+              <a
+                href="#contact"
+                onClick={handleClick}
+                className="hover:text-gray-400"
+              >
                 Contact
               </a>
             </li>
           </ul>
-          <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full">
-            Contact me
-          </button>
+          <a href="#contact">
+            <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full">
+              Contact me
+            </button>
+          </a>
         </div>
       </div>
     </nav>

@@ -3,7 +3,7 @@ import Segzy from "../assets/Segzy.png";
 
 function About() {
   return (
-    <div className="py-10">
+    <div className="py-10" id="aboutme">
       <div className="container mx-auto px- md:px-16 lg:px-24 space-x-0 md:space-x-10 mt-10 py-12">
         <h2 className="text-4xl font-bold text-center mb-12">About me</h2>
         <div className="flex flex-col lg:flex-row items-center md:space-x-12 p">
