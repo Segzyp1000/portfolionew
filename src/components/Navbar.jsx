@@ -25,21 +25,25 @@ function Navbar() {
 
   return (
     <nav className="px-8 md:px-16 lg:px-24">
-      <div className="w-full py-2 flex justify-between item-center">
+      <div
+        className={`w-full py-2 flex justify-between item-center  ${
+          openNavigation ? "bg-black/40" : "bg-black/5 backdrop-blur-sm"
+        }`}
+      >
         <div className="py-2">
           <img src={logo} alt="" width={85} height={85} className="p-2" />
         </div>
         <div className="hidden md:flex space-x-6 p-2">
-          <a href="#home" className="h1 hover:text-gray-400">
+          <a href="#home" className="h hover:text-gray-400">
             Home
           </a>
-          <a href="#aboutme" className="h1 hover:text-gray-400">
+          <a href="#aboutme" className=" hover:text-gray-400">
             About me
           </a>
-          <a href="#projects" className="h1 hover:text-gray-400">
+          <a href="#projects" className=" hover:text-gray-400">
             Projects
           </a>
-          <a href="#contact" className="h1 hover:text-gray-400">
+          <a href="#contact" className=" hover:text-gray-400">
             Contact
           </a>
         </div>
@@ -67,9 +71,9 @@ function Navbar() {
         <div
           className={`${
             openNavigation ? "flex" : "hidden"
-          } md:hidden flex-col py-12 justify-center items-center bg-gray-800 text-white p-4 absolute top-16 left-0 z-50 w-full space-y-9`}
+          } md:hidden flex-col py-20 justify-center items-center bg-gray-800 text-white p-4 absolute top-16 left-0 z-50 w-full h-[92%] space-y-12`}
         >
-          <ul className="space-y-7 flex flex-col justify-center items-center">
+          <ul className="space-y-20 flex flex-col justify-center items-center">
             <li className="py-2">
               <a
                 href="#home"
