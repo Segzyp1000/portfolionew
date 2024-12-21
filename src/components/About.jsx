@@ -33,7 +33,7 @@ function About() {
                     HTML & CSS
                   </label>
                   <div className="grow bg-gray-800 rounded-full h-2.5 md:ml-4">
-                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-12/12"></div>
                   </div>
                 </div>
               </div>
@@ -47,7 +47,7 @@ function About() {
                     JAVASCRIPT
                   </label>
                   <div className="grow bg-gray-800 rounded-full h-2.5 md:ml-4">
-                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-7/12"></div>
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
                   </div>
                 </div>
               </div>
@@ -74,7 +74,7 @@ function About() {
                     SCSS
                   </label>
                   <div className="grow bg-gray-800 rounded-full h-2.5 md:ml-4">
-                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-8/12"></div>
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
                   </div>
                 </div>
               </div>
@@ -87,7 +87,7 @@ function About() {
                     TAILWIND
                   </label>
                   <div className="grow bg-gray-800 rounded-full h-2.5 md:ml-4">
-                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-11/12"></div>
                   </div>
                 </div>
               </div>
@@ -100,7 +100,7 @@ function About() {
                     GIT & GITHUB
                   </label>
                   <div className="grow bg-gray-800 rounded-full h-2.5 md:ml-4">
-                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-5/12"></div>
+                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12"></div>
                   </div>
                 </div>
               </div>
