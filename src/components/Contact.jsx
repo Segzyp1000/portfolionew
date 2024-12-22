@@ -70,7 +70,6 @@ export default function Contact() {
           </div>
           <div className="flex-1 w-full">
             <form onSubmit={handleSubmit(onSubmit)} target="_blank">
-              ;
               <div>
                 <label htmlFor="name" className="block my-2">
                   Your Name
@@ -126,6 +125,11 @@ export default function Contact() {
               >
                 {submitButton}
               </button>
+              {message && (
+                <span className="text-green-400 ml-2">
+                  Form submitted successfully!
+                </span>
+              )}
             </form>
           </div>
         </div>
