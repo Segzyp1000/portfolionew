@@ -7,8 +7,9 @@ export default function () {
       <img
         src={segun}
         alt=""
-        className="hidden md:block mx-auto mb-8 h-48 w-48 rounded-full onject-cover transform transition-transform duration-300 hover:scale-105"
+        className="hidden md:block mx-auto mb-8 h-48 w-48 rounded-full object-cover object-top transform transition-transform duration-300 hover:scale-105"
       />
+
       <h1 className="h1 text-4xl font-bold">
         I'm{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 overflow-x-auto">
