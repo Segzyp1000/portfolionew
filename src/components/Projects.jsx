@@ -5,10 +5,19 @@ import barbshow from "../assets/barbshow.png";
 import lendsqr from "../assets/lendsq.png";
 import movie from "../assets/movie.png";
 import shop from "../assets/shop.png";
+import khuefue from "../assets/khuefue.png";
 
 const projects = [
   {
     id: 1,
+    name: "Dashboard",
+    image: khuefue,
+    technology: "React, Tailwind, ContextAPI, ChartJs, React-Router-Dom",
+    github: "https://github.com/Segzyp1000/khueproject",
+    website: "https://khueproject.vercel.app/",
+  },
+  {
+    id: 2,
     name: "Brainwave",
     image: brainwaveimg,
     technology: "React, Tailwindcss",
@@ -16,7 +25,7 @@ const projects = [
     website: "https://brainwaves-s6as.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     name: "Barb-shows",
     image: barbshow,
     technology: "React, Firebase, Tailwindcss",
@@ -24,7 +33,7 @@ const projects = [
     website: "https://barb-shows.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     name: "Nike Landing Page",
     image: nike,
     technology: "React, Tailwndcss",
@@ -33,7 +42,7 @@ const projects = [
   },
 
   {
-    id: 4,
+    id: 5,
     name: "Lendsqr",
     image: lendsqr,
     technology: "React, SCSS, TypeScript",
@@ -41,7 +50,7 @@ const projects = [
     website: "https://segun-olowoyeye-lendsqr-fe-test.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     name: "Movie",
     image: movie,
     technology: "React, Firebase, Tailwindcss, ContextAPI",
@@ -49,7 +58,7 @@ const projects = [
     website: "https://movieboxlist.vercel.app/",
   },
   {
-    id: 6,
+    id: 7,
     name: "eCommerce",
     image: shop,
     technology: "React, Tailwind, ContextAPI",
