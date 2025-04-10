@@ -27,7 +27,7 @@ export default function () {
           </button>
         </a>
         <a
-          href="https://drive.google.com/file/d/1nA34qGYLlRd9lJ5N4dGF872C_ft6meHE/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1t5DipNiPvzmD0Fxe4yqGjMGq3HMFt7V5/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
