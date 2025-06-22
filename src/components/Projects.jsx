@@ -68,16 +68,6 @@ const projects = [
     description:
       "A movie discovery platform that allows users to browse and search for movies, built with React and Firebase for backend services, styled with Tailwind CSS.",
   },
-  {
-    id: 7,
-    name: "eCommerce",
-    image: shop,
-    technology: "React, Tailwind, ContextAPI",
-    github: "https://github.com/Segzyp1000/timbo-shop",
-    website: "https://timbo-shop.vercel.app/",
-    description:
-      "An eCommerce application that provides a seamless shopping experience, built with React and styled using Tailwind CSS, featuring product listings and a shopping cart.",
-  },
 ];
 
 export default function Projects() {
