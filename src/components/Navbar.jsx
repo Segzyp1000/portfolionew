@@ -112,11 +112,6 @@ function Navbar() {
               </a>
             </li>
           </ul>
-          <a href="#contact">
-            <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 hover:scale-105 px-2 py-4 rounded-full items-center">
-              Contact me
-            </button>
-          </a>
         </div>
       </div>
     </nav>
