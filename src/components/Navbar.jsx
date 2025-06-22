@@ -24,7 +24,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="px-8 md:px-16 lg:px-24">
+    <nav className="px-8 md:px-16 lg:px-24 p-4">
       <div
         className={`w-full py-2 flex justify-between item-center  ${
           openNavigation ? "bg-black/40" : "bg-black/5 backdrop-blur-sm"
@@ -71,9 +71,9 @@ function Navbar() {
         <div
           className={`${
             openNavigation ? "flex" : "hidden"
-          } md:hidden flex-col py-20 justify-center items-center bg-gray-800 text-white p-4 absolute top-16 left-0 z-50 w-full h-[92%] space-y-12`}
+          } md:hidden fixed flex-col py-10 justify-center items-center bg-gray-800 text-white p-4  top-16 left-0 z-50 w-full h-[92%] space-y-7`}
         >
-          <ul className="space-y-20 flex flex-col justify-center items-center">
+          <ul className="space-y-20 mt-12 flex flex-col justify-center items-center">
             <li className="py-2">
               <a
                 href="#home"
@@ -113,7 +113,7 @@ function Navbar() {
             </li>
           </ul>
           <a href="#contact">
-            <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full items-center">
+            <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 hover:scale-105 px-2 py-4 rounded-full items-center">
               Contact me
             </button>
           </a>

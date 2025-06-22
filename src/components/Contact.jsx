@@ -37,7 +37,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="py-10" id="contact">
+    <div className="py-10 mt-5" id="contact">
       <div className="container mx-auto px-5 md:px-16 lg:px-24 space-x-5 mt-10 py-12">
         <h2 className="text-4xl font-bold text-center mb-12">Contact me</h2>
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
@@ -68,10 +68,10 @@ export default function Contact() {
               <span>Ketu,Lagos, Nigeria</span>
             </div>
           </div>
-          <div className="flex-1 w-full">
+          <div className="flex-1 w-full space-y-6">
             <form onSubmit={handleSubmit(onSubmit)} target="_blank">
               <div>
-                <label htmlFor="name" className="block my-2">
+                <label htmlFor="name" className="block my-2 ">
                   Your Name
                 </label>
                 <input
@@ -87,7 +87,7 @@ export default function Contact() {
                 )}
               </div>
               <div>
-                <label htmlFor="email" className="block my-2">
+                <label htmlFor="email" className="block my-2 ">
                   Email Address
                 </label>
                 <input
@@ -104,7 +104,7 @@ export default function Contact() {
                 )}
               </div>
               <div>
-                <label htmlFor="message" className="block my-2">
+                <label htmlFor="message" className="block my-2 ">
                   Message
                 </label>
                 <textarea

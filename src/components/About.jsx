@@ -4,16 +4,16 @@ import Segzy from "../assets/Segzy.png";
 function About() {
   return (
     <div id="aboutme">
-      <div className="container mx-auto px- md:px-16 lg:px-24 space-x-0 md:space-x-10  py-10">
-        <h2 className="text-4xl font-bold text-center mb-12">About me</h2>
+      <div className="container mx-auto  md:px-16 lg:px-24 space-x-0 md:space-x-10 py-12">
+        <h2 className="text-4xl font-bold text-center py-12">About me</h2>
         <div className="flex flex-col lg:flex-row items-center md:space-x-12 p">
           <img
             src={Segzy}
             alt=""
             className="rounded oject-cover mb-8 md:mb-0"
           />
-          <div className="flex-1 py-8">
-            <p className="text-lg text-center md:text-left">
+          <div className="flex-1 py-8 ">
+            <p className="text-mono font-mono text-gray-400 text-center md:text-left">
               I'm a driven web developer dedicated to building cutting-edge,
               responsive web applications. My transition from sales to
               development was fueled by a genuine passion for technology. Now,
@@ -105,7 +105,7 @@ function About() {
                 </div>
               </div>
             </div>
-            <div className="mt-12 flex justify-between text-center">
+            <div className="mt-12 flex justify-between max-w-[650px] text-center">
               <div>
                 <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
                   2+

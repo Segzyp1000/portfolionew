@@ -10,7 +10,7 @@ function Footer() {
           <div className="flex flex-col md:flex-row md:space-x-12 items-center mb-4 ">
             <div className="flex-1 mb-5 md:mb-0">
               <img src={segun2} alt="" width={85} height={85} />
-              <p className="text-gray-400">
+              <p className="text-gray-400 mt-5">
                 Frontend Developer based in Lagos, Nigeria.
               </p>
             </div>
