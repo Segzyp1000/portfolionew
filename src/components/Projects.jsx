@@ -16,27 +16,28 @@ const projects = [
     github: "https://github.com/Segzyp1000/khueproject",
     website: "https://khueproject.vercel.app/",
     description:
-      "A comprehensive dashboard application built with React and Tailwind CSS, featuring data visualization using Chart.js and routing with React Router.",
+      "Developed a dynamic dashboard application using React and Tailwind CSS, showcasing expertise in data visualization with Chart.js and seamless navigation via React Router. Implemented a responsive design with theme switching capabilities, allowing users to toggle between dark and light modes. Additionally, integrated pagination features to enhance user experience. The application also includes robust CRUD (Create, Read, Update, Delete) operations on select pages, demonstrating proficiency in managing complex data interactions. .",
   },
+
   {
     id: 2,
-    name: "Brainwave",
-    image: brainwaveimg,
-    technology: "React, Tailwindcss",
-    github: "https://github.com/Segzyp1000/brainwaves",
-    website: "https://brainwaves-s6as.vercel.app/",
-    description:
-      "A modern web application designed to enhance productivity and mental well-being, built with React and styled using Tailwind CSS.",
-  },
-  {
-    id: 3,
     name: "Barb-shows",
     image: barbshow,
     technology: "React, Firebase, Tailwindcss",
     github: "https://github.com/Segzyp1000/barb-show",
     website: "https://barb-shows.vercel.app/",
     description:
-      "An interactive platform for booking barbershop appointments, built with React and Firebase for real-time data management and Tailwind CSS for styling.",
+      "Developed a fully functional e-commerce shoe store using React and JavaScript, styled with Tailwind CSS. Implemented Firebase Authentication to enable secure user login, while also allowing guests to browse products, add items to their cart, and manage their cart contents. Utilized React Router DOM for seamless client-side routing between pages, ensuring a smooth and intuitive user experience",
+  },
+  {
+    id: 3,
+    name: "Brainwave",
+    image: brainwaveimg,
+    technology: "React, Tailwindcss",
+    github: "https://github.com/Segzyp1000/brainwaves",
+    website: "https://brainwaves-s6as.vercel.app/",
+    description:
+      "Designed and developed a visually stunning web application that showcases my expertise in crafting modern, responsive user interfaces. Implemented scroll-lock functionality on mobile devices to enhance user experience and leveraged absolute positioning to create a sleek, contemporary design aesthetic.",
   },
   {
     id: 4,
@@ -46,7 +47,7 @@ const projects = [
     github: "https://github.com/Segzyp1000/Nike-landing-page",
     website: "https://nike-landing-page-xi-three.vercel.app/",
     description:
-      "A sleek and modern landing page for Nike, showcasing products and promotions, built with React and styled using Tailwind CSS.",
+      "Designed and developed a cutting-edge landing page for a dummy Nike app, featuring a showcase of products and promotions. Built with React and styled with Tailwind CSS, this project demonstrates my ability to craft visually stunning and modern digital experiences that highlight brand identity and that showcase my user interface design skills. The landing page is fully responsive, ensuring an optimal viewing experience across all devices.",
   },
   {
     id: 5,
@@ -56,7 +57,7 @@ const projects = [
     github: "https://github.com/Segzyp1000/lendsqr",
     website: "https://segun-olowoyeye-lendsqr-fe-test.vercel.app/",
     description:
-      "A feature-rich web application for financial services, built with React and TypeScript, styled using SCSS for a modern look and feel.",
+      "Explored the capabilities of TypeScript and SCSS in a React project, implementing features such as pagination to enhance user experience. The application includes a login system that validates user credentials, requiring a password with a minimum of 6 characters. This project allowed me to gain hands-on experience with TypeScript's type safety and SCSS's styling capabilities, while also showcasing my ability to build functional and user-friendly interfaces.",
   },
   {
     id: 6,
