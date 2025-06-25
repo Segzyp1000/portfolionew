@@ -51,16 +51,6 @@ const projects = [
   },
   {
     id: 5,
-    name: "Lendsqr",
-    image: lendsqr,
-    technology: "React, SCSS, TypeScript",
-    github: "https://github.com/Segzyp1000/lendsqr",
-    website: "https://segun-olowoyeye-lendsqr-fe-test.vercel.app/",
-    description:
-      "Explored the capabilities of TypeScript and SCSS in a React project, implementing features such as pagination to enhance user experience. The application includes a login system that validates user credentials, requiring a password with a minimum of 6 characters. This project allowed me to gain hands-on experience with TypeScript's type safety and SCSS's styling capabilities, while also showcasing my ability to build functional and user-friendly interfaces.",
-  },
-  {
-    id: 6,
     name: "Movie",
     image: movie,
     technology: "React, Tailwindcss",
