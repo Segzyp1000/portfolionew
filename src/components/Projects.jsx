@@ -16,7 +16,7 @@ const projects = [
     github: "https://github.com/Segzyp1000/khueproject",
     website: "https://khueproject.vercel.app/",
     description:
-      "Developed a dynamic dashboard application using React and Tailwind CSS, showcasing expertise in data visualization with Chart.js and seamless navigation via React Router. Implemented a responsive design with theme switching capabilities, allowing users to toggle between dark and light modes. Additionally, integrated pagination features to enhance user experience. The application also includes robust CRUD (Create, Read, Update, Delete) operations on select pages, demonstrating proficiency in managing complex data interactions. .",
+      "Developed a dynamic dashboard application using React and Tailwind CSS, showcasing expertise in data visualization with Chart.js and seamless navigation via React Router. Implemented a responsive design with theme switching capabilities, allowing users to toggle between dark and light modes. Additionally, integrated pagination features to enhance user experience.",
   },
 
   {
