@@ -24,12 +24,8 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-6 md:px-16 lg:px-24 py-3 bg-black/30 backdrop-blur-md shadow-md">
-      <div
-        className={`w-full py-2 flex justify-between items-center ${
-          openNavigation ? "bg-black/40" : "bg-black/5 backdrop-blur-sm"
-        }`}
-      >
+    <nav className="fixed top-0 left-0 w-full z-50 px-6 md:px-16 lg:px-24 py-3 bg-black/40 backdrop-blur-md shadow-md">
+      <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
           <img
@@ -64,59 +60,39 @@ function Navbar() {
         </a>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden p-3 z-50 ">
+        <div className="md:hidden">
           {openNavigation ? (
             <AiOutlineClose
-              size={25}
-              className="text-white"
+              size={28}
+              className="text-white cursor-pointer"
               onClick={toggleNavigation}
             />
           ) : (
             <RxHamburgerMenu
-              size={25}
-              className="text-white"
+              size={28}
+              className="text-white cursor-pointer"
               onClick={toggleNavigation}
             />
           )}
         </div>
       </div>
 
-      {/* Backdrop Overlay */}
-      {openNavigation && (
-        <div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 transition-opacity duration-500"
-          onClick={handleClick}
-        ></div>
-      )}
-
       {/* Mobile Navigation */}
       <div
-        className={`md:hidden fixed top-0 right-0 z-40 w-4/5 max-w-sm h-screen bg-gray-900 text-white flex flex-col justify-center items-center transform transition-transform duration-500 ease-in-out
-          ${openNavigation ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}
-        `}
+        className={`${
+          openNavigation ? "flex" : "hidden"
+        } md:hidden fixed top-0 left-0 w-full h-full bg-black/90 backdrop-blur-sm flex-col items-center justify-center space-y-12 text-white text-lg font-semibold transition`}
       >
-        <ul className="space-y-10 text-2xl font-medium">
-          <li>
-            <a href="#home" onClick={handleClick} className="hover:text-gray-400">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#aboutme" onClick={handleClick} className="hover:text-gray-400">
-              About me
-            </a>
-          </li>
-          <li>
-            <a href="#projects" onClick={handleClick} className="hover:text-gray-400">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={handleClick} className="hover:text-gray-400">
-              Contact
-            </a>
-          </li>
-        </ul>
+        {["Home", "About me", "Projects", "Contact"].map((link) => (
+          <a
+            key={link}
+            href={`#${link.toLowerCase().replace(" ", "")}`}
+            onClick={handleClick}
+            className="hover:text-green-400 transition-colors"
+          >
+            {link}
+          </a>
+        ))}
       </div>
     </nav>
   );
