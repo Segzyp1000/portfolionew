@@ -5,7 +5,7 @@ import segun2 from "../assets/SEGUN.png";
 function Footer() {
   return (
     <>
-      <footer className="pt-20 py-3">
+      <footer className="py-16">
         <div className="container mx-auto px-8 md:px-13 lg:px-24">
           <div className="flex flex-col md:flex-row md:space-x-12 items-center mb-4 ">
             <div className="flex-1 mb-5 md:mb-0">

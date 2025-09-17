@@ -23,7 +23,7 @@ export default function Hero() {
       </h1>
 
       {/* Subtext */}
-      <p className="mt-3 text-sm md:text-lg text-gray-500 max-w-lg mx-auto">
+      <p className="mt-3 text-sm md:text-lg text-gray-400 max-w-lg mx-auto">
         I specialize in building modern and responsive web applications that
         deliver great user experiences.
       </p>
@@ -41,7 +41,7 @@ export default function Hero() {
 
         <a
           href="#projects"
-          className="border border-gray-400 text-gray-700 dark:text-gray-200 px-6 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
+          className="border border-gray-400 text-gray-500 dark:text-gray-200 px-6 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
         >
           👨‍💻 View Projects
         </a>

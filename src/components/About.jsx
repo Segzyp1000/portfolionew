@@ -22,7 +22,7 @@ function About() {
           {/* Text + TechStack */}
           <div className="flex-1 text-center lg:text-left">
             {/* About Text */}
-            <p className="text-gray-500 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               I'm a driven web developer dedicated to building cutting-edge,
               responsive web applications. My transition from sales to
               development was fueled by a genuine passion for technology. Now,
