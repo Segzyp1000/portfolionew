@@ -9,6 +9,7 @@ export default function Hero() {
       {/* Profile Image */}
       <img
         src={segun}
+        loading="lazy"
         alt="Segun Olowoyeye"
         className="mx-auto mb-6 h-32 w-32 md:h-48 md:w-48 rounded-full object-cover object-top shadow-lg ring-4 ring-white/10"
       />

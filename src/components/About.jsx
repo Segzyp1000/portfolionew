@@ -16,6 +16,7 @@ function About() {
           <img
             src={Segzy}
             alt="Segun Olowoyeye"
+            loading="lazy"
             className="rounded-xl object-cover shadow-lg mb-8 lg:mb-0 w-56 h-56 md:w-72 md:h-72 transition-transform duration-300 hover:scale-105"
           />
 

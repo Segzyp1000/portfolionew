@@ -24,75 +24,92 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-6 md:px-16 lg:px-24 py-3 bg-black/40 backdrop-blur-md shadow-md">
-      <div className="flex justify-between items-center">
-        {/* Logo */}
-        <div className="flex items-center">
-          <img
-            src={logo}
-            alt="Logo"
-            width={85}
-            height={85}
-            className="p-2 hover:scale-105 transition-transform"
-          />
+    <nav className="px-8 md:px-16 lg:px-24 p-4">
+      <div
+        className={`w-full py-2 flex justify-between item-center  ${
+          openNavigation ? "bg-black/40" : "bg-black/5 backdrop-blur-sm"
+        }`}
+      >
+        <div className="py-2">
+          <img src={logo} alt="" width={85} height={85} className="p-2" />
         </div>
-
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center space-x-8 text-white font-medium">
-          {["Home", "About me", "Projects"].map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase().replace(" ", "")}`}
-              className="relative group"
-            >
-              {link}
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-green-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-          ))}
+        <div className="hidden md:flex space-x-6  mt-2 p-2">
+          <a href="#home" className="hover:text-gray-400">
+            Home
+          </a>
+          <a href="#aboutme" className=" hover:text-gray-400">
+            About me
+          </a>
+          <a href="#projects" className=" hover:text-gray-400">
+            Projects
+          </a>
         </div>
-
-        {/* CTA Button */}
         <a
           href="#contact"
-          className="hidden md:block bg-gradient-to-r from-green-400 to-blue-500 text-white px-6 py-2 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300"
+          className="hidden md:block bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 hover:scale-105 p-4 rounded-full"
         >
           Contact me
         </a>
-
-        {/* Mobile Menu Toggle */}
-        <div className="md:hidden">
+        <div className="md:hidden p-3">
           {openNavigation ? (
             <AiOutlineClose
-              size={28}
-              className="text-white cursor-pointer"
+              size={25}
+              className="text-white"
               onClick={toggleNavigation}
             />
           ) : (
             <RxHamburgerMenu
-              size={28}
-              className="text-white cursor-pointer"
+              size={25}
+              className="text-white"
               onClick={toggleNavigation}
             />
           )}
         </div>
-      </div>
+        <div
+          className={`${
+            openNavigation ? "flex" : "hidden"
+          } md:hidden fixed flex-col py-10 justify-center items-center bg-gray-800 text-white p-4  top-16 left-0 z-50 w-full h-[92%]`}
+        >
+          <ul className="space-y-20 mt-10 flex flex-col justify-center items-center">
+            <li className="py-2">
+              <a
+                href="#home"
+                onClick={handleClick}
+                className="hover:text-gray-400"
+              >
+                Home
+              </a>
+            </li>
+            <li className="py-2">
+              <a
+                href="#aboutme"
+                onClick={handleClick}
+                className="hover:text-gray-400"
+              >
+                About me
+              </a>
+            </li>
 
-      {/* Mobile Navigation */}
-      <div
-        className={`${
-          openNavigation ? "flex" : "hidden"
-        } md:hidden fixed top-0 left-0 w-full h-full bg-black/90 backdrop-blur-sm flex-col items-center justify-center space-y-12 text-white text-lg font-semibold transition`}
-      >
-        {["Home", "About me", "Projects", "Contact"].map((link) => (
-          <a
-            key={link}
-            href={`#${link.toLowerCase().replace(" ", "")}`}
-            onClick={handleClick}
-            className="hover:text-green-400 transition-colors"
-          >
-            {link}
-          </a>
-        ))}
+            <li className="py-2">
+              <a
+                href="#projects"
+                onClick={handleClick}
+                className="hover:text-gray-400"
+              >
+                Projects
+              </a>
+            </li>
+            <li className="py-2">
+              <a
+                href="#contact"
+                onClick={handleClick}
+                className="hover:text-gray-400"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );

@@ -34,6 +34,7 @@ function Navbar() {
         <div className="flex items-center">
           <img
             src={logo}
+            loading="lazy"
             alt="Logo"
             width={85}
             height={85}

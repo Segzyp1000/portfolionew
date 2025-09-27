@@ -90,6 +90,7 @@ export default function Projects() {
                       <img
                         src={project.image}
                         alt={project.name}
+                        loading="lazy"
                         className="w-full h-full object-cover rounded-t-xl transform transition-transform duration-500 hover:scale-110"
                       />
                     </div>

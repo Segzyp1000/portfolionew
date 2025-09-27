@@ -9,7 +9,7 @@ function Footer() {
         <div className="container mx-auto px-8 md:px-13 lg:px-24">
           <div className="flex flex-col md:flex-row md:space-x-12 items-center mb-4 ">
             <div className="flex-1 mb-5 md:mb-0">
-              <img src={segun2} alt="" width={85} height={85} />
+              <img src={segun2} loading="lazy" alt="logo" height={85} width={85} />
               <p className="text-gray-400 mt-5">
                 Frontend Developer based in Lagos, Nigeria.
               </p>
