@@ -1,80 +1,110 @@
 import React from "react";
-import Segzy from "../assets/Segzy.png";
+import { motion } from "framer-motion";
+import { FaReact, FaHtml5, FaJs, FaGithub, FaCss3Alt } from "react-icons/fa";
+import { RiNextjsFill } from "react-icons/ri";
+import { SiTailwindcss, SiTypescript } from "react-icons/si";
 
 function About() {
+  const techIcons = [
+    { icon: <FaHtml5 className="text-orange-500" />, name: "HTML" },
+    { icon: <FaCss3Alt className="text-blue-600" />, name: "CSS3" },
+    { icon: <RiNextjsFill className="text-white" />, name: "Next.js" },
+    { icon: <SiTypescript className="text-blue-400" />, name: "TypeScript" },
+    { icon: <FaJs className="text-yellow-400" />, name: "JavaScript" },
+    { icon: <FaReact className="text-cyan-400" />, name: "React" },
+    { icon: <SiTailwindcss className="text-sky-400" />, name: "Tailwind" },
+    { icon: <FaGithub className="text-gray-400" />, name: "GitHub" },
+  ];
+
   return (
-    <section id="aboutme" className="bg-black/5 py-16 px-6 md:px-16 lg:px-24">
-      <div className="container mx-auto">
-        {/* Section Title */}
-        <h2 className="text-4xl font-bold text-center mb-12">
-          About <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Me</span>
-        </h2>
+    <section
+      id="aboutme"
+      className="container relative bg-black/5 py-20 px-6 md:px-16 lg:px-24 overflow-hidden mx-auto"
+    >
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-16">
+        {/* LEFT — About Text */}
+        <div className="lg:w-1/2 text-center lg:text-left space-y-6">
+          <h2 className="text-4xl font-bold">
+            About{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+              Me
+            </span>
+          </h2>
 
-        {/* Flex Container */}
-        <div className="flex flex-col lg:flex-row items-center lg:space-x-12">
-          {/* Profile Image */}
-          <img
-            src={Segzy}
-            alt="Segun Olowoyeye"
-            loading="lazy"
-            className="rounded-xl object-cover shadow-lg mb-8 lg:mb-0 w-56 h-56 md:w-72 md:h-72 transition-transform duration-300 hover:scale-105"
-          />
+          <p className="text-gray-400 leading-relaxed">
+            I'm a passionate Frontend Developer who enjoys crafting elegant,
+            responsive, and user-focused web applications. I transitioned from
+            sales to tech, driven by a deep curiosity and love for innovation.
+          </p>
 
-          {/* Text + TechStack */}
-          <div className="flex-1 text-center lg:text-left">
-            {/* About Text */}
-            <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              I'm a driven web developer dedicated to building cutting-edge,
-              responsive web applications. My transition from sales to
-              development was fueled by a genuine passion for technology. Now,
-              I'm committed to creating intuitive, efficient, and user-centric
-              digital experiences.
-            </p>
+          <p className="text-gray-400 leading-relaxed">
+            My goal is to merge creativity and logic — building interactive,
+            accessible, and efficient solutions that delight users and drive
+            results.
+          </p>
 
-            {/* Tech Stack */}
-            <div className="mt-10">
-              <h3 className="text-3xl font-bold text-center lg:text-left mb-8">
-                Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Stack</span>
-              </h3>
-
-              <div className="space-y-6">
-                {[
-                  { name: "HTML & CSS", width: "w-full" },
-                  { name: "JavaScript", width: "w-10/12" },
-                  { name: "TypeScript", width: "w-10/12" },
-                  { name: "ReactJS", width: "w-10/12" },
-                  { name: "SCSS", width: "w-10/12" },
-                  { name: "Tailwind", width: "w-11/12" },
-                  { name: "Git & GitHub", width: "w-10/12" },
-                ].map((skill) => (
-                  <div key={skill.name} className="flex items-center">
-                    <span className="w-28 font-medium">{skill.name}</span>
-                    <div className="flex-1 bg-gray-800 rounded-full h-2.5 ml-4">
-                      <div
-                        className={`${skill.width} bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transition-all duration-500 hover:brightness-110`}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-4 pt-6">
+            
+            {[
+              { number: "2+", label: "Years Experience" },
+              { number: "35+", label: "Projects" },
+              { number: "2+", label: "Internships" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+                  {stat.number}
+                </h3>
+                <p className="text-gray-500 text-sm">{stat.label}</p>
               </div>
-            </div>
-
-            {/* Stats Section */}
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center lg:text-left">
-              {[
-                { number: "2+", label: "Years Experience" },
-                { number: "35+", label: "Completed Projects" },
-                { number: "2+", label: "Completed Internships" },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                    {stat.number}
-                  </h3>
-                  <p className="text-gray-500">{stat.label}</p>
-                </div>
-              ))}
-            </div>
+            ))}
           </div>
+        </div>
+
+        {/* RIGHT — Animated Tech Icons */}
+        <div className="lg:w-1/2 relative flex flex-col items-center">
+         <h2 className="text-3xl font-bold">
+            Tech{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+              Stack
+            </span>
+          </h2>
+
+          {/* Glowing Background */}
+          <div className="absolute w-80 h-80 bg-gradient-to-r from-green-400/20 to-blue-500/20 blur-3xl rounded-full animate-pulse"></div>
+
+          {/* Tech Icons Grid */}
+          <motion.div
+            className="grid grid-cols-3 gap-6 z-10 mt-5"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.2,
+                },
+              },
+            }}
+          >
+            {techIcons.map((tech, index) => (
+              <motion.div
+                key={index}
+                className="text-5xl p-4 rounded-full bg-white/5 hover:bg-white/10 transition duration-300 cursor-pointer"
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                whileHover={{
+                  scale: 1.3,
+                  boxShadow: "0px 0px 15px rgba(0, 255, 255, 0.5)",
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                {tech.icon}
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>
