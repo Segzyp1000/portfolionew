@@ -16,6 +16,52 @@ function About() {
     { icon: <FaGithub className="text-gray-400" />, name: "GitHub" },
   ];
 
+  // Floating warm animation for icons
+  const iconVariants = {
+    floating: {
+      y: [0, -10, 0],
+      scale: [1, 1.1, 1],
+      transition: {
+        duration: 2.5,
+        repeat: Infinity,
+        repeatType: "mirror",
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  // Fade in when scrolled into view
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1.2, ease: "easeOut" },
+    },
+  };
+
+  // Parent animation to stagger children (icons)
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // delay each icon
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  // Each icon reveal animation
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
     <section
       id="aboutme"
@@ -23,7 +69,13 @@ function About() {
     >
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-16">
         {/* LEFT — About Text */}
-        <div className="lg:w-1/2 text-center lg:text-left space-y-6">
+        <motion.div
+          className="lg:w-1/2 text-center lg:text-left space-y-6"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <h2 className="text-4xl font-bold">
             About{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
@@ -45,7 +97,6 @@ function About() {
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-4 pt-6">
-            
             {[
               { number: "2+", label: "Years Experience" },
               { number: "35+", label: "Projects" },
@@ -59,11 +110,17 @@ function About() {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* RIGHT — Animated Tech Icons */}
-        <div className="lg:w-1/2 relative flex flex-col items-center">
-         <h2 className="text-3xl font-bold">
+        <motion.div
+          className="lg:w-1/2 relative flex flex-col items-center"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <h2 className="text-3xl font-bold mb-5">
             Tech{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
               Stack
@@ -76,36 +133,33 @@ function About() {
           {/* Tech Icons Grid */}
           <motion.div
             className="grid grid-cols-3 gap-6 z-10 mt-5"
+            variants={containerVariants}
             initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {},
-              visible: {
-                transition: {
-                  staggerChildren: 0.2,
-                },
-              },
-            }}
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
           >
             {techIcons.map((tech, index) => (
               <motion.div
                 key={index}
-                className="text-5xl p-4 rounded-full bg-white/5 hover:bg-white/10 transition duration-300 cursor-pointer"
-                variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0 },
-                }}
+                variants={itemVariants}
                 whileHover={{
-                  scale: 1.3,
-                  boxShadow: "0px 0px 15px rgba(0, 255, 255, 0.5)",
+                  scale: 1.2,
+                  rotate: 3,
+                  boxShadow: "0px 0px 20px rgba(0, 255, 255, 0.5)",
                 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                transition={{ type: "spring", stiffness: 200 }}
               >
-                {tech.icon}
+                <motion.div
+                  className="text-5xl p-4 rounded-full bg-white/5 hover:bg-white/10 transition duration-300 cursor-pointer"
+                  variants={iconVariants}
+                  animate="floating"
+                >
+                  {tech.icon}
+                </motion.div>
               </motion.div>
             ))}
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

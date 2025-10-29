@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { FaEnvelope, FaPhone, FaMapMarkedAlt } from "react-icons/fa";
 
@@ -36,13 +37,31 @@ export default function Contact() {
     }
   };
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1.2, ease: "easeOut" },
+    },
+  };
+
   return (
     <div className="py-16" id="contact">
+     
       <div className="container mx-auto px-5 md:px-16 lg:px-24 space-x-5 mt-10 py-12">
       <h2 className="text-4xl font-bold text-center mb-12">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Contact</span> Me
         </h2>
+        
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
+          <motion.div
+            className="w-full flex flex-col md:flex-row gap-10"
+                    variants={fadeInUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                  >
           <div className="flex-1">
             <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 mb-4">
               Let's Talk
@@ -134,7 +153,8 @@ export default function Contact() {
               )}
             </form>
           </div>
-        </div>
+         </motion.div>
+         </div>
       </div>
     </div>
   );
