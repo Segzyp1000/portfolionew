@@ -4,17 +4,18 @@ import nike from "../assets/NIKE.png";
 import barbshow from "../assets/barbshow.png";
 import movie from "../assets/movie.png";
 import khuefue from "../assets/khuefue.png";
+import ShelfSync from "../assets/ShelfSync.png"
 
 const projects = [
   {
-    id: 1,
-    name: "Dashboard",
-    image: khuefue,
-    technology: "React, Tailwind, ContextAPI, ChartJs, React-Router-Dom",
-    github: "https://github.com/Segzyp1000/khueproject",
-    website: "https://khueproject.vercel.app/",
+     id: 1,
+    name: "Inventory Dashboard",
+    image: ShelfSync,
+    technology: "Next,TypeScript,Tailwind, Recharts",
+    github: "https://github.com/Segzyp1000/inventory-dashboard/",
+    website: "https://inventory-dashboard-inky.vercel.app/",
     description:
-      "Developed a dynamic dashboard application using React and Tailwind CSS, showcasing expertise in data visualization with Chart.js and seamless navigation via React Router. Implemented a responsive design with theme switching capabilities, allowing users to toggle between dark and light modes. Additionally, integrated pagination features to enhance user experience.",
+      "Developed a full-stack Next.js application using TypeScript and React, leveraging Stackframe for data management and Neon as my database solution. The app features a responsive dashboard page, powered by Rechart, providing dynamic and data-driven visualizations. Through optimization, I improved dashboard load times by 30%, enhancing the overall user experiences"
   },
   {
     id: 2,
@@ -28,6 +29,17 @@ const projects = [
   },
   {
     id: 3,
+    name: "Dashboard",
+    image: khuefue,
+    technology: "React, Tailwind, ContextAPI, ChartJs, React-Router-Dom",
+    github: "https://github.com/Segzyp1000/khueproject",
+    website: "https://khueproject.vercel.app/",
+    description:
+      "Developed a dynamic dashboard application using React and Tailwind CSS, showcasing expertise in data visualization with Chart.js and seamless navigation via React Router. Implemented a responsive design with theme switching capabilities, allowing users to toggle between dark and light modes. Additionally, integrated pagination features to enhance user experience.",
+  },
+  
+  {
+    id: 4,
     name: "Brainwave",
     image: brainwaveimg,
     technology: "React, Tailwindcss",
@@ -37,7 +49,7 @@ const projects = [
       "Designed and developed a visually stunning web application that showcases my expertise in crafting modern, responsive user interfaces. Implemented scroll-lock functionality on mobile devices to enhance user experience.",
   },
   {
-    id: 4,
+    id: 5,
     name: "Nike Landing Page",
     image: nike,
     technology: "React, Tailwindcss",
@@ -47,7 +59,7 @@ const projects = [
       "Designed and developed a cutting-edge landing page for a dummy Nike app, featuring a showcase of products and promotions. Fully responsive, ensuring an optimal viewing experience across all devices.",
   },
   {
-    id: 5,
+    id: 6,
     name: "Movie",
     image: movie,
     technology: "React, Tailwindcss",
