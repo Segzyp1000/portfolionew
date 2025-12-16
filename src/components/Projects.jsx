@@ -37,9 +37,19 @@ const projects = [
     description:
       "Developed a dynamic dashboard application using React and Tailwind CSS, showcasing expertise in data visualization with Chart.js and seamless navigation via React Router. Implemented a responsive design with theme switching capabilities, allowing users to toggle between dark and light modes. Additionally, integrated pagination features to enhance user experience.",
   },
-  
   {
     id: 4,
+    name: "Movie",
+    image: movie,
+    technology: "React, Tailwindcss",
+    github: "https://github.com/Segzyp1000/movie",
+    website: "https://movieboxlist.vercel.app/",
+    description:
+      "A movie discovery platform that allows users to browse and search for movies, built with React and Firebase for backend services, styled with Tailwind CSS.",
+  },
+  
+  {
+    id: 5,
     name: "Brainwave",
     image: brainwaveimg,
     technology: "React, Tailwindcss",
@@ -49,7 +59,7 @@ const projects = [
       "Designed and developed a visually stunning web application that showcases my expertise in crafting modern, responsive user interfaces. Implemented scroll-lock functionality on mobile devices to enhance user experience.",
   },
   {
-    id: 5,
+    id: 6,
     name: "Nike Landing Page",
     image: nike,
     technology: "React, Tailwindcss",
@@ -58,16 +68,7 @@ const projects = [
     description:
       "Designed and developed a cutting-edge landing page for a dummy Nike app, featuring a showcase of products and promotions. Fully responsive, ensuring an optimal viewing experience across all devices.",
   },
-  {
-    id: 6,
-    name: "Movie",
-    image: movie,
-    technology: "React, Tailwindcss",
-    github: "https://github.com/Segzyp1000/movie",
-    website: "https://movieboxlist.vercel.app/",
-    description:
-      "A movie discovery platform that allows users to browse and search for movies, built with React and Firebase for backend services, styled with Tailwind CSS.",
-  },
+  
 ];
 
 export default function Projects() {
