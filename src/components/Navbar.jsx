@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import logo from "../assets/SEGUN.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
@@ -6,136 +6,88 @@ import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 function Navbar() {
   const [openNavigation, setOpenNavigation] = useState(false);
-  const [touchStartX, setTouchStartX] = useState(null);
-  const [touchEndX, setTouchEndX] = useState(null);
+  const menuRef = useRef(null); // Reference to the mobile menu
 
-  const minSwipeDistance = 60;
+  /* 1. Close menu when clicking outside */
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      // If the menu is open AND the click is NOT inside the menuRef
+      if (openNavigation && menuRef.current && !menuRef.current.contains(event.target)) {
+        closeMenu();
+      }
+    };
 
-  /* ----------------------------
-     Scroll Lock Safety Cleanup
-  ----------------------------- */
+    // Add listener when menu is open
+    if (openNavigation) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [openNavigation]);
+
+  /* 2. Scroll Lock Cleanup */
   useEffect(() => {
     return () => enablePageScroll();
   }, []);
 
-  /* ----------------------------
-     Toggle Menu
-  ----------------------------- */
   const toggleNavigation = () => {
-    setOpenNavigation((prev) => {
-      const next = !prev;
-      next ? disablePageScroll() : enablePageScroll();
-      return next;
-    });
+    if (openNavigation) {
+      closeMenu();
+    } else {
+      setOpenNavigation(true);
+      disablePageScroll();
+    }
   };
 
-  /* ----------------------------
-     Close Menu
-  ----------------------------- */
   const closeMenu = () => {
     setOpenNavigation(false);
     enablePageScroll();
   };
 
-  /* ----------------------------
-     Swipe Handlers
-  ----------------------------- */
-  const onTouchStart = (e) => {
-    setTouchEndX(null);
-    setTouchStartX(e.targetTouches[0].clientX);
-  };
-
-  const onTouchMove = (e) => {
-    setTouchEndX(e.targetTouches[0].clientX);
-  };
-
-  const onTouchEnd = () => {
-    if (!touchStartX || !touchEndX) return;
-
-    const distance = touchStartX - touchEndX;
-
-    // Swipe LEFT → RIGHT (close)
-    if (distance < -minSwipeDistance && openNavigation) {
-      closeMenu();
-    }
-  };
-
   return (
     <nav className="fixed top-0 left-0 w-full z-50 px-6 md:px-16 lg:px-24 py-3 bg-black/30 backdrop-blur-md shadow-md">
-      {/* Navbar Content */}
-      <div className="container w-full py-2 flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <img
-          src={logo}
-          loading="lazy"
-          alt="Logo"
-          width={85}
-          height={85}
-          className="p-2 hover:scale-105 transition-transform"
-        />
+        <img src={logo} alt="Logo" width={85} height={85} className="p-2" />
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center space-x-8 text-white font-medium">
-          {["Home", "About me", "Projects"].map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase().replace(" ", "")}`}
-              className="relative group"
-            >
-              {link}
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-green-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-          ))}
+        <div className="hidden md:flex items-center space-x-8 text-white">
+          <a href="#home">Home</a>
+          <a href="#aboutme">About me</a>
+          <a href="#projects">Projects</a>
         </div>
 
-        {/* CTA */}
-        <a
-          href="#contact"
-          className="hidden md:block bg-gradient-to-r from-green-400 to-blue-500 text-white px-6 py-2 rounded-full shadow-lg hover:scale-105 transition-transform"
+        {/* Mobile Toggle Button */}
+        <button 
+          className="md:hidden z-[60] text-white p-2" 
+          onClick={(e) => {
+            e.stopPropagation(); // Prevent this click from triggering handleOutsideClick
+            toggleNavigation();
+          }}
         >
-          Contact me
-        </a>
-
-        {/* Mobile Toggle */}
-        <div className="md:hidden z-50 p-3">
-          {openNavigation ? (
-            <AiOutlineClose
-              size={25}
-              className="text-white"
-              onClick={toggleNavigation}
-            />
-          ) : (
-            <RxHamburgerMenu
-              size={25}
-              className="text-white"
-              onClick={toggleNavigation}
-            />
-          )}
-        </div>
+          {openNavigation ? <AiOutlineClose size={25} /> : <RxHamburgerMenu size={25} />}
+        </button>
       </div>
 
-      {/* Backdrop */}
-      {openNavigation && (
-        <div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-30"
-          onClick={closeMenu}
-        />
-      )}
-
-      {/* Mobile Menu */}
+      {/* BACKDROP (The dark overlay) */}
       <div
-        className={`md:hidden fixed top-0 right-0 z-40 w-4/5 max-w-sm h-screen bg-gray-900 text-white
-        flex flex-col justify-center items-center transform transition-transform duration-500 ease-in-out
-        ${openNavigation ? "translate-x-0" : "translate-x-full"}`}
-        onClick={closeMenu}
-        onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
-        onTouchEnd={onTouchEnd}
+        className={`fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+          openNavigation ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        style={{ zIndex: 40 }}
+      />
+
+      {/* MOBILE MENU (The side panel) */}
+      <div
+        ref={menuRef} // Connect the Ref here
+        className={`md:hidden fixed top-0 right-0 h-screen w-4/5 max-w-sm bg-gray-900 text-white shadow-2xl transform transition-transform duration-500 ease-in-out ${
+          openNavigation ? "translate-x-0" : "translate-x-full"
+        }`}
+        style={{ zIndex: 50 }}
       >
-        <ul
-          className="space-y-10 text-2xl font-medium"
-          onClick={(e) => e.stopPropagation()}
-        >
+        <ul className="flex flex-col items-center justify-center h-full space-y-10 text-2xl">
           <li><a href="#home" onClick={closeMenu}>Home</a></li>
           <li><a href="#aboutme" onClick={closeMenu}>About me</a></li>
           <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
