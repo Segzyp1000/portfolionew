@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { FaReact, FaHtml5, FaJs, FaGithub, FaCss3Alt } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
