@@ -48,27 +48,6 @@ const projects = [
       "A movie discovery platform that allows users to browse and search for movies, built with React and Firebase for backend services, styled with Tailwind CSS.",
   },
   
-  {
-    id: 5,
-    name: "Brainwave",
-    image: brainwaveimg,
-    technology: "React, Tailwindcss",
-    github: "https://github.com/Segzyp1000/brainwaves",
-    website: "https://brainwaves-s6as.vercel.app/",
-    description:
-      "Designed and developed a visually stunning web application that showcases my expertise in crafting modern, responsive user interfaces. Implemented scroll-lock functionality on mobile devices to enhance user experience.",
-  },
-  {
-    id: 6,
-    name: "Nike Landing Page",
-    image: nike,
-    technology: "React, Tailwindcss",
-    github: "https://github.com/Segzyp1000/Nike-landing-page",
-    website: "https://nike-landing-page-xi-three.vercel.app/",
-    description:
-      "Designed and developed a cutting-edge landing page for a dummy Nike app, featuring a showcase of products and promotions. Fully responsive, ensuring an optimal viewing experience across all devices.",
-  },
-  
 ];
 
 export default function Projects() {
