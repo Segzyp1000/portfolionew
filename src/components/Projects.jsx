@@ -1,10 +1,8 @@
 import { useState } from "react";
-import brainwaveimg from "../assets/brainwave.png";
-import nike from "../assets/NIKE.png";
 import barbshow from "../assets/barbshow.png";
-import movie from "../assets/movie.png";
+import kleen from "../assets/kleen.png";
 import khuefue from "../assets/khuefue.png";
-import ShelfSync from "../assets/ShelfSync.png"
+import ShelfSync from "../assets/ShelfSync.png";
 
 const projects = [
   {
@@ -39,15 +37,14 @@ const projects = [
   },
   {
     id: 4,
-    name: "Movie",
-    image: movie,
+    name: "TjayKleen Cleaning Services",
+    image: kleen,
     technology: "React, Tailwindcss",
-    github: "https://github.com/Segzyp1000/movie",
-    website: "https://movieboxlist.vercel.app/",
+    github: "hhttps://github.com/Segzyp1000/tjkleen",
+    website: "https://tjkleen.vercel.app/",
     description:
-      "A movie discovery platform that allows users to browse and search for movies, built with React and Firebase for backend services, styled with Tailwind CSS.",
+      "Created a responsive website for TjayKleen Cleaning Services using React and Tailwind CSS. The site features a clean design, showcasing the company's services, customer testimonials, and a contact form for inquiries. Implemented smooth scrolling and interactive elements to enhance user engagement.",
   },
-  
 ];
 
 export default function Projects() {
