@@ -83,23 +83,24 @@ function About() {
           </h2>
 
           <p className="text-gray-400 leading-relaxed">
-            I'm a passionate Frontend Developer who enjoys crafting elegant,
-            responsive, and user-focused web applications. I transitioned from
-            sales to tech, driven by a deep curiosity and love for innovation.
+            I have over 5 years of experience in sales and fintech, working
+            directly with merchants and customers. I also build frontend
+            applications using React and JavaScript. My focus is on creating
+            tools and interfaces that improve business operations, customer
+            experience, and revenue growth.
           </p>
 
           <p className="text-gray-400 leading-relaxed">
-            My goal is to merge creativity and logic — building interactive,
-            accessible, and efficient solutions that delight users and drive
-            results.
+            My focus is on creating tools and interfaces that improve business
+            operations, customer experience, and revenue growth.
           </p>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-4 pt-6">
             {[
-              { number: "2+", label: "Years Experience" },
-              { number: "35+", label: "Projects" },
-              { number: "2+", label: "Internships" },
+              { number: "5+", label: "Years Experience in Sales and Fintech" },
+              { number: "35+", label: "Tech Projects" },
+              { number: "2+", label: "Internships in Tech" },
             ].map((stat) => (
               <div key={stat.label}>
                 <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
