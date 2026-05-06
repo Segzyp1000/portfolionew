@@ -57,6 +57,8 @@ function Navbar() {
           <a href="#home">Home</a>
           <a href="#aboutme">About me</a>
           <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+       
         </div>
 
         {/* Mobile Toggle Button */}

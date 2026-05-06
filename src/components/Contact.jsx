@@ -48,7 +48,6 @@ export default function Contact() {
 
   return (
     <div className="py-16" id="contact">
-     
       <div className="container mx-auto px-5 md:px-16 lg:px-24 space-x-5 mt-10 py-12">
       <h2 className="text-4xl font-bold text-center mb-12">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Contact</span> Me
