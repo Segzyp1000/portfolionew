@@ -15,7 +15,7 @@ function About() {
     { icon: <FaGithub className="text-gray-400" />, name: "GitHub" },
   ];
 
-  // Floating warm animation for icons
+  // Floating animation
   const iconVariants = {
     floating: {
       y: [0, -10, 0],
@@ -29,7 +29,7 @@ function About() {
     },
   };
 
-  // Fade in when scrolled into view
+  // Fade animation
   const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -39,19 +39,19 @@ function About() {
     },
   };
 
-  // Parent animation to stagger children (icons)
+  // Stagger container
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // delay each icon
+        staggerChildren: 0.2,
         delayChildren: 0.3,
       },
     },
   };
 
-  // Each icon reveal animation
+  // Each icon
   const itemVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
@@ -64,9 +64,27 @@ function About() {
   return (
     <section
       id="aboutme"
-      className="container relative bg-black/5 py-20 px-6 md:px-16 lg:px-24 overflow-hidden mx-auto"
+      className="relative bg-black/5 py-20 px-6 md:px-16 lg:px-24 overflow-hidden"
     >
+      {/* 🌌 Background Layers */}
+
+      {/* Grid Pattern */}
+      <div className="absolute inset-0 -z-20 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]" />
+
+      {/* Left Glow */}
+      <div className="absolute top-20 left-[-100px] w-[300px] h-[300px] bg-green-500/20 blur-3xl rounded-full" />
+
+      {/* Right Glow */}
+      <div className="absolute bottom-0 right-[-100px] w-[300px] h-[300px] bg-blue-500/20 blur-3xl rounded-full" />
+
+      {/* Center Blend Glow */}
+      <div className="absolute inset-0 flex justify-center items-center -z-10">
+        <div className="w-[500px] h-[500px] bg-gradient-to-r from-green-400/10 to-blue-500/10 blur-3xl rounded-full" />
+      </div>
+
+      {/* 🌐 Main Content */}
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-16">
+        
         {/* LEFT — About Text */}
         <motion.div
           className="lg:w-1/2 text-center lg:text-left space-y-6"
@@ -85,24 +103,26 @@ function About() {
           <p className="text-gray-400 leading-relaxed">
             I have over 5 years of experience in sales and fintech, working
             directly with merchants and customers. I also build frontend
-            applications using React and JavaScript. My focus is on creating
-            tools and interfaces that improve business operations, customer
-            experience, and revenue growth.
+            applications using React and JavaScript, focusing on tools that
+            improve business operations, customer experience, and revenue growth.
           </p>
 
           <p className="text-gray-400 leading-relaxed">
-            My focus is on creating tools and interfaces that improve business
-            operations, customer experience, and revenue growth.
+            I bridge the gap between business needs and technology by creating
+            solutions that are not only functional but also user-friendly and scalable.
           </p>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-4 pt-6">
             {[
-              { number: "5+", label: "Years Experience in Sales and Fintech" },
+              { number: "5+", label: "Years Experience" },
               { number: "35+", label: "Tech Projects" },
-              { number: "2+", label: "Internships in Tech" },
+              { number: "2+", label: "Internships" },
             ].map((stat) => (
-              <div key={stat.label}>
+              <div
+                key={stat.label}
+                className="bg-white/5 backdrop-blur-md p-4 rounded-xl hover:scale-105 transition"
+              >
                 <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
                   {stat.number}
                 </h3>
@@ -112,7 +132,7 @@ function About() {
           </div>
         </motion.div>
 
-        {/* RIGHT — Animated Tech Icons */}
+        {/* RIGHT — Tech Stack */}
         <motion.div
           className="lg:w-1/2 relative flex flex-col items-center"
           variants={fadeInUp}
@@ -127,10 +147,13 @@ function About() {
             </span>
           </h2>
 
-          {/* Glowing Background */}
-          <div className="absolute w-80 h-80 bg-gradient-to-r from-green-400/20 to-blue-500/20 blur-3xl rounded-full animate-pulse"></div>
+          {/* Glow Background */}
+          <div className="absolute w-80 h-80 bg-gradient-to-r from-green-400/20 to-blue-500/20 blur-3xl rounded-full animate-[pulse_4s_ease-in-out_infinite]" />
 
-          {/* Tech Icons Grid */}
+          {/* Rotating Ring */}
+          <div className="absolute w-96 h-96   animate-spin-slow" />
+
+          {/* Icons */}
           <motion.div
             className="grid grid-cols-3 gap-6 z-10 mt-5"
             variants={containerVariants}
@@ -150,7 +173,7 @@ function About() {
                 transition={{ type: "spring", stiffness: 200 }}
               >
                 <motion.div
-                  className="text-5xl p-4 rounded-full bg-white/5 hover:bg-white/10 transition duration-300 cursor-pointer"
+                  className="text-5xl p-4 rounded-full bg-white/5 hover:bg-white/10 transition duration-300 cursor-pointer backdrop-blur-md"
                   variants={iconVariants}
                   animate="floating"
                 >

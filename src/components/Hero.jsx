@@ -2,10 +2,14 @@ import segun from "../assets/segx.jpg";
 
 export default function Hero() {
   return (
-    <section
-      className="text-center py-16 md:py-24 bg-black/5 px-4 mt-20"
-      id="home"
-    >
+  <section
+  className="relative text-center py-16 md:py-24 bg-black/5 px-4 mt-20 overflow-hidden"
+  id="home"
+>
+  {/* Background Blob */}
+  <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 -z-10">
+    <div className="w-[400px] h-[400px] bg-gradient-to-r from-green-400 to-emerald-600 opacity-20 blur-3xl rounded-full"></div>
+  </div>
       {/* Profile Image */}
       <img
         src={segun}

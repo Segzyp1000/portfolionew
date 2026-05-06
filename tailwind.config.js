@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        "spin-slow": "spin 20s linear infinite",
+      },
       ".container": {
           "@apply max-w-[77.5rem]  xl:max-w-[87.5rem]":
             {},
