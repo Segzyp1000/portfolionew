@@ -32,7 +32,7 @@ export default function Hero() {
       {/* Buttons */}
       <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a
-          href="https://drive.google.com/file/d/1t5DipNiPvzmD0Fxe4yqGjMGq3HMFt7V5/view?usp=sharing"
+          href="https://drive.google.com/file/d/1uZNbX1hd2BPbNyvnawPkLaw_oBOjGgNq/view?usp=drivesdk"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-gradient-to-r from-red-500 to-blue-500 text-white px-6 py-2 rounded-full shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300"
