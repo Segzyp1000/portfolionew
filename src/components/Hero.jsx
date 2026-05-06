@@ -20,13 +20,12 @@ export default function Hero() {
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
           Segun Olowoyeye
         </span>
-        , <br className="md:hidden" /> a Frontend Developer
+       
       </h1>
 
       {/* Subtext */}
       <p className="mt-3 text-sm md:text-lg text-gray-400 max-w-lg mx-auto">
-        I specialize in building modern and responsive web applications that
-        deliver great user experiences.
+        I build application and tools that improve business opeations, customer experience, and revenue growth.
       </p>
 
       {/* Buttons */}
