@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import segun2 from "../assets/SEGUN.png";
 
 function Footer() {
@@ -18,15 +18,10 @@ function Footer() {
 
           <div className="border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between mx-auto items-center">
             <p className="text-gray-400">
-              &copy;{new Date().getFullYear()}. All right rserved
+              &copy;{new Date().getFullYear()}. All right reserved
             </p>
             <div className="flex space-x-5 my-4 md:my-0">
-              <a
-                href="https://www.instagram.com/segzyp1000/"
-                className="text-gray-400 hover:text-white"
-              >
-                <FaInstagram />
-              </a>
+             
               <a
                 href="https://www.linkedin.com/in/segun-olowoyeye-04909b76/"
                 className="text-gray-400 hover:text-white"
@@ -40,14 +35,7 @@ function Footer() {
                 <FaGithub />
               </a>
             </div>
-            <div>
-              <a href="#" className="text-gray-400 hover:text-white">
-                Privacy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                Terms of Services
-              </a>
-            </div>
+           
           </div>
         </div>
       </footer>
